@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  employee_formfilling:
+    build:
+      context: ./Employee_Formfilling
+    container_name: employee_formfilling
+    ports:
+      - "3001:80"
+    restart: unless-stopped
+
+  hr_formfilling:
+    build:
+      context: ./HR_FormFilling
+    container_name: hr_formfilling
+    ports:
+      - "3002:80"
+    restart: unless-stopped
+
+  welcome_page:
+    build:
+      context: ./Welcome-Page
+    container_name: welcome_page
+    ports:
+      - "3003:80"
+    restart: unless-stopped
+
