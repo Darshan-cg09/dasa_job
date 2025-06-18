@@ -11,7 +11,7 @@ const pool = new Pool({
     host: 'localhost',
     database: 'job_application_db',
     password: 'root', // Replace with your PostgreSQL password
-    port: 5432,
+    port: 5433,
 });
 
 // Middleware
@@ -306,5 +306,5 @@ app.delete('/api/applications', async (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+    console.log(`Server running on http://13.61.11.112:${port}`);
 });
